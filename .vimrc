@@ -104,3 +104,7 @@ nmap <leader>c <Plug>(Scalpel)
 vmap <leader>y "+y
 
 nnoremap <leader><leader> <C-^>
+
+map /  <Plug>(incsearch-forward)
+map ?  <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)
