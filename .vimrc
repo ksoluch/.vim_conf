@@ -28,7 +28,7 @@ set hlsearch
 set term=screen-256color
 set relativenumber
 set foldmethod=indent
-set foldlevel=1
+set foldlevel=100
 
 "nice cursor in the insert mode
 if exists('$TMUX')
@@ -109,3 +109,6 @@ nnoremap <leader><leader> <C-^>
 map /  <Plug>(incsearch-forward)
 map ?  <Plug>(incsearch-backward)
 map g/ <Plug>(incsearch-stay)
+
+nnoremap <leader>l1 :set foldlevel=1<CR>
+nnoremap <leader>l2 :set foldlevel=100<CR>
