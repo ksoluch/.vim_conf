@@ -28,6 +28,7 @@ set hlsearch
 set term=screen-256color
 set relativenumber
 set foldmethod=indent
+set foldlevel=1
 
 "nice cursor in the insert mode
 if exists('$TMUX')
