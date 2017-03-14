@@ -67,13 +67,10 @@ nnoremap <silent><leader>W :CommandTTag<CR>
 nnoremap <silent><leader>f :CommandT<CR>
 nnoremap <silent><leader>F :CommandT %:p:h<CR>
 
-nnoremap <leader>A :Ack --type=cpp ""<Left>
-nnoremap <silent><leader>a :Ack --type=cpp <C-r><C-W><CR>
-nnoremap <silent><leader><C-a> :Ack --type=cpp <C-r><C-W><CR>
-
-nnoremap <leader>Z :Ack --type=cc ""<Left>
-nnoremap <silent><leader>z :Ack --type=cc <C-r><C-W><CR>
-nnoremap <silent><leader><C-z> :Ack --type=cc <C-r><C-W><CR>
+"ACK for C\C++
+nnoremap <leader>A :Ack --cpp --cc ""<Left>
+nnoremap <silent><leader>a :Ack --cpp --cc <C-r><C-W><CR>
+nnoremap <silent><leader><C-a> :Ack --cpp --cc <C-r><C-W><CR>
 
 nnoremap <leader>t :TlistToggle<CR><C-h><C-h>
 
@@ -112,3 +109,4 @@ map g/ <Plug>(incsearch-stay)
 
 nnoremap <leader>l1 :set foldlevel=1<CR>
 nnoremap <leader>l2 :set foldlevel=100<CR>
+
