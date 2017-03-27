@@ -43,12 +43,13 @@ endif
 nnoremap <silent><leader>9 : set relativenumber<CR>
 nnoremap <silent><leader>0 : set norelativenumber<CR>
 
-" P = full path
+"full path
 nnoremap <silent><leader>p :let @* = expand("%:p")<CR>
-" SHIFT+P = file name
+"file name
 nnoremap <silent><leader>P :let @* = expand("%:t")<CR>
-" CTRL+P = parent folder
-nnoremap <silent><leader><S-p> :let @* = expand("%:p:h")<CR>
+"parent folder
+nnoremap <silent><leader><C-p> :let @* = expand("%:p:h")<CR>
+"
 " save
 nnoremap <silent><leader>1 :w!<CR>
 " close
@@ -67,10 +68,12 @@ nnoremap <silent><leader>W :CommandTTag<CR>
 nnoremap <silent><leader>f :CommandT<CR>
 nnoremap <silent><leader>F :CommandT %:p:h<CR>
 
-"ACK for C\C++
-nnoremap <leader>A :Ack --cpp --cc ""<Left>
+"search the word under the cursor
 nnoremap <silent><leader>a :Ack --cpp --cc <C-r><C-W><CR>
-nnoremap <silent><leader><C-a> :Ack --cpp --cc <C-r><C-W><CR>
+"type the search phrase
+nnoremap <leader>A :Ack --cpp --cc ""<Left>
+"take the word under the cursor as a base for the search phrase
+nnoremap <leader><C-a> :Ack --cpp --cc "<C-r><C-W>"<Left>
 
 nnoremap <leader>t :TlistToggle<CR><C-h><C-h>
 
@@ -109,4 +112,3 @@ map g/ <Plug>(incsearch-stay)
 
 nnoremap <leader>l1 :set foldlevel=1<CR>
 nnoremap <leader>l2 :set foldlevel=100<CR>
-
