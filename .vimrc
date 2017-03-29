@@ -12,6 +12,7 @@ filetype plugin indent on
 colorscheme molokai
 
 let mapleader=" "
+let CommandTMaxFiles=20000
 
 set laststatus=2
 set hidden
