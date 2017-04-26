@@ -12,8 +12,8 @@ filetype plugin indent on
 colorscheme molokai
 
 let mapleader=" "
-let CommandTMaxFiles=20000
-
+let CommandTMaxFiles=1000000
+let CommandTTraverseSCM='pwd'
 set laststatus=2
 set hidden
 set wildignore+=*/obj/**
@@ -67,7 +67,6 @@ nnoremap <silent><leader>w :CommandTLine<CR>
 nnoremap <silent><leader>W :CommandTTag<CR>
 
 nnoremap <silent><leader>f :CommandT<CR>
-nnoremap <silent><leader>F :CommandT %:p:h<CR>
 
 "search the word under the cursor
 nnoremap <silent><leader>a :Ack --cpp --cc <C-r><C-W><CR>
