@@ -12,3 +12,5 @@ git submodule add https://github.com/tomtom/tlib_vim.git ./bundle/tlib_vim
 git submodule add https://github.com/honza/vim-snippets.git ./bundle/vim_snippets
 git submodule add https://github.com/haya14busa/incsearch.vim.git ./bundle/incsearch
 git submodule add https://github.com/octol/vim-cpp-enhanced-highlight.git ./bundle/vim_cpp_enhanced
+git submodule add https://github.com/kana/vim-operator-user.git ./bundle/vim_operator_user   
+git submodule add https://github.com/rhysd/vim-clang-format.git ./bundle/vim_clang_format

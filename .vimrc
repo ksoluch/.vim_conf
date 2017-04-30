@@ -29,7 +29,7 @@ set hlsearch
 set term=screen-256color
 set relativenumber
 set foldmethod=indent
-set foldlevel=100
+set foldlevel=0
 
 "nice cursor in the insert mode
 if exists('$TMUX')
@@ -112,3 +112,13 @@ map g/ <Plug>(incsearch-stay)
 
 nnoremap <leader>l1 :set foldlevel=1<CR>
 nnoremap <leader>l2 :set foldlevel=100<CR>
+
+let g:clang_format#code_style = "mozilla"
+let g:clang_format#style_options = {
+            \ "AccessModifierOffset" : 0,
+            \ "AllowShortIfStatementsOnASingleLine" : "true",
+            \ "AlwaysBreakTemplateDeclarations" : "true",
+            \ "Standard" : "C++11"}
+
+vmap <silent>= :ClangFormat<CR>
+nmap <silent><leader>= :<C-u>ClangFormat<CR>
