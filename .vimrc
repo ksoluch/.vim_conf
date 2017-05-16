@@ -76,10 +76,6 @@ nnoremap <C-k> <C-W>k
 nnoremap <C-l> <C-W>l
 nnoremap <C-x> <C-W>c
 
-"add line above current
-nnoremap <silent><C-d> o<Esc>
-nnoremap <silent><C-u> O<Esc>
-
 nnoremap <silent><C-s> s<Esc><Esc>
 
 nnoremap <silent><leader>[ :vertical resize -5<CR>
