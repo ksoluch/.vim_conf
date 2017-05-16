@@ -83,8 +83,11 @@ nnoremap <C-k> <C-W>k
 nnoremap <C-l> <C-W>l
 nnoremap <C-x> <C-W>c
 
-nnoremap <silent>= O<Esc>
-nnoremap <silent>- o<Esc>
+"add line above current
+nnoremap <silent><C-d> o<Esc>
+nnoremap <silent><C-u> O<Esc>
+
+nnoremap <silent><C-s> s<Esc><Esc>
 
 nnoremap <silent><leader>[ :vertical resize -5<CR>
 nnoremap <silent><leader>] :vertical resize +5<CR>
@@ -113,7 +116,7 @@ map g/ <Plug>(incsearch-stay)
 nnoremap <leader>l1 :set foldlevel=1<CR>
 nnoremap <leader>l2 :set foldlevel=100<CR>
 
-let g:clang_format#code_style = "llvm"
+let g:clang_format#code_style = "chromium"
 let g:clang_format#style_options = {
             \ "AccessModifierOffset" : 0,
             \ "AllowShortIfStatementsOnASingleLine" : "true",
@@ -122,3 +125,8 @@ let g:clang_format#style_options = {
 
 vmap <silent>= :ClangFormat<CR>
 nmap <silent><leader>= :<C-u>ClangFormat<CR>
+
+"concert to hex
+" %!xxd
+"reverse back to bin
+" %!xxd -r
