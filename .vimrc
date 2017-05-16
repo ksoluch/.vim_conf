@@ -43,7 +43,7 @@ nnoremap <silent><leader>p :let @* = expand("%:p")<CR>
 nnoremap <silent><leader>P :let @* = expand("%:t")<CR>
 "parent folder
 nnoremap <silent><leader><C-p> :let @* = expand("%:p:h")<CR>
-"
+
 " save
 nnoremap <silent><leader>1 :w!<CR>
 " close
@@ -75,6 +75,11 @@ nnoremap <C-j> <C-W>j
 nnoremap <C-k> <C-W>k
 nnoremap <C-l> <C-W>l
 nnoremap <C-x> <C-W>c
+
+"create new line below and go there
+nnoremap <silent>1 o<Esc><Esc>
+"create new line above and go there
+nnoremap <silent>2 O<Esc><Esc>
 
 nnoremap <silent><C-s> s<Esc><Esc>
 
