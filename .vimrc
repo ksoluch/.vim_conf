@@ -97,6 +97,7 @@ nnoremap <leader>D :g/
 
 nnoremap <silent><leader>l :ls<CR>
 nnoremap * *N
+nnoremap <silent><leader>* :nohlsearch<CR>
 
 nmap <leader>c <Plug>(Scalpel)
 vmap <leader>y "+y
