@@ -111,6 +111,7 @@ map g/ <Plug>(incsearch-stay)
 nnoremap <leader>l1 :set foldlevel=1<CR>
 nnoremap <leader>l2 :set foldlevel=100<CR>
 
+let g:clang_format#command = "clang-format-4.0"
 let g:clang_format#code_style = "llvm"
 let g:clang_format#style_options = {
             \ "IndentWidth" : 3,
