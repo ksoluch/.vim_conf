@@ -62,11 +62,11 @@ nnoremap <silent><leader>W :CommandTTag<CR>
 nnoremap <silent><leader>f :CommandT<CR>
 
 "search the word under the cursor
-nnoremap <silent><leader>a :Ack --cpp --cc <C-r><C-W><CR>
+nnoremap <silent><leader>A :Ack! --asm --cpp --cc <C-r><C-W><CR>
 "type the search phrase
-nnoremap <leader>A :Ack --cpp --cc ""<Left>
+nnoremap <leader>a :Ack! --asm --cpp --cc ""<Left>
 "take the word under the cursor as a base for the search phrase
-nnoremap <leader><C-a> :Ack --cpp --cc "<C-r><C-W>"<Left>
+nnoremap <leader><C-a> :Ack! --asm --cpp --cc "<C-r><C-W>"<Left>
 
 nnoremap <leader>t :TlistToggle<CR><C-h><C-h>
 
@@ -85,8 +85,8 @@ nnoremap <silent><C-s> s<Esc><Esc>
 
 nnoremap <silent><leader>[ :vertical resize -5<CR>
 nnoremap <silent><leader>] :vertical resize +5<CR>
-nnoremap <silent><leader>= :resize +5<CR>
-nnoremap <silent><leader>- :resize -5<CR>
+nnoremap <silent><leader>+ :resize +5<CR>
+nnoremap <silent><leader>_ :resize -5<CR>
 
 nnoremap <silent><leader>e :only<CR>
 nnoremap <silent><leader>r :tabe %<CR>
