@@ -89,9 +89,12 @@ nnoremap <silent><leader>+ :resize +5<CR>
 nnoremap <silent><leader>_ :resize -5<CR>
 
 nnoremap <silent><leader>e :only<CR>
-nnoremap <silent><leader>r :tabe %<CR>
-nnoremap <silent><leader>v :vsplit %<CR>
-nnoremap <silent><leader>s :split %<CR>
+nnoremap <silent><leader>r mm:tabe %<CR>'m
+nnoremap <silent><leader>v mm:vsplit %<CR>'m
+nnoremap <silent><leader>s mm:split %<CR>'m
+nnoremap <silent><leader>R :tabe %<CR>
+nnoremap <silent><leader>V :vsplit %<CR>
+nnoremap <silent><leader>S :split %<CR>
 nnoremap <silent><leader>d :g/<C-r><C-W><CR>
 nnoremap <leader>D :g/
 
