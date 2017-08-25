@@ -4,6 +4,7 @@ filetype plugin indent on
 
 colorscheme molokai
 
+
 let mapleader=" "
 let CommandTMaxFiles=1000000
 let CommandTTraverseSCM='pwd'
@@ -34,8 +35,12 @@ else
 endif
 
 "Key mappings
-nnoremap <silent><leader>9 : set relativenumber<CR>
 nnoremap <silent><leader>0 : set norelativenumber<CR>
+nnoremap <silent><leader>9 : set relativenumber<CR>
+
+"TODO: test configuration, remove if not needed
+"disables comparing whitespaces in vimdiff
+nnoremap <silent><leader>5 : set diffopt+=iwhite<CR>
 
 "full path
 nnoremap <silent><leader>p :let @* = expand("%:p")<CR>
@@ -95,8 +100,8 @@ nnoremap <silent><leader>s mm:split %<CR>'m
 nnoremap <silent><leader>R :tabe %<CR>
 nnoremap <silent><leader>V :vsplit %<CR>
 nnoremap <silent><leader>S :split %<CR>
-nnoremap <silent><leader>d :g/<C-r><C-W><CR>
-nnoremap <leader>D :g/
+nnoremap <silent><leader>D :g/<C-r><C-W><CR>
+nnoremap <leader>d :g/
 
 nnoremap <silent><leader>l :ls<CR>
 nnoremap * *N
@@ -110,7 +115,6 @@ nnoremap <leader><leader> <C-^>
 map /  <Plug>(incsearch-forward)
 map ?  <Plug>(incsearch-backward)
 map g/ <Plug>(incsearch-stay)
-
 nnoremap <leader>l1 :set foldlevel=1<CR>
 nnoremap <leader>l2 :set foldlevel=100<CR>
 
@@ -125,7 +129,22 @@ let g:clang_format#style_options = {
 vmap <silent>= :ClangFormat<CR>
 nmap <silent><leader>= :<C-u>ClangFormat<CR>
 
-"concert to hex
-" %!xxd
-"reverse back to bin
-" %!xxd -r
+nnoremap <leader>ba :call CscopeFindInteractive(expand('<cword>'))<CR>
+nnoremap <leader>l :call ToggleLocationList()<CR>
+
+" s: Find this C symbol 
+nnoremap  <leader>bs :call cscope#find('s', expand('<cword>'))<CR> 
+" g: Find this definition 
+nnoremap  <leader>bg :call cscope#find('g', expand('<cword>'))<CR> 
+" d: Find functions called by this function 
+nnoremap  <leader>bd :call cscope#find('d', expand('<cword>'))<CR> 
+" c: Find functions calling this function 
+nnoremap  <leader>bc :call cscope#find('c', expand('<cword>'))<CR> 
+" t: Find this text string 
+nnoremap  <leader>bt :call cscope#find('t', expand('<cword>'))<CR> 
+" e: Find this egrep pattern 
+nnoremap  <leader>be :call cscope#find('e', expand('<cword>'))<CR> 
+" f: Find this file 
+nnoremap  <leader>bf :call cscope#find('f', expand('<cword>'))<CR> 
+" i: Find files #including this file 
+nnoremap  <leader>bi :call cscope#find('i', expand('<cword>'))<CR> 
