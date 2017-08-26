@@ -58,7 +58,7 @@ nnoremap <silent><leader>3 :q<CR>
 nnoremap <silent><leader>n :NERDTreeToggle<CR>
 nnoremap <silent><leader>N :NERDTreeFind<CR>
 
-nnoremap <silent><leader>b :LustyBufferGrep<CR>
+"nnoremap <silent><leader>b :LustyBufferGrep<CR>
 nnoremap <silent><leader>B :CommandTBuffer<CR>
 
 nnoremap <silent><leader>w :CommandTLine<CR>
@@ -103,7 +103,6 @@ nnoremap <silent><leader>S :split %<CR>
 nnoremap <silent><leader>D :g/<C-r><C-W><CR>
 nnoremap <leader>d :g/
 
-nnoremap <silent><leader>l :ls<CR>
 nnoremap * *N
 nnoremap <silent><leader>* :nohlsearch<CR>
 
