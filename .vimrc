@@ -132,18 +132,18 @@ nnoremap <leader>ba :call CscopeFindInteractive(expand('<cword>'))<CR>
 nnoremap <leader>l :call ToggleLocationList()<CR>
 
 " s: Find this C symbol 
-nnoremap  <leader>bs :call cscope#find('s', expand('<cword>'))<CR> 
+nnoremap  <leader>bs :call CscopeFind('s', expand('<cword>'))<CR> 
 " g: Find this definition 
-nnoremap  <leader>bg :call cscope#find('g', expand('<cword>'))<CR> 
+nnoremap  <leader>bg :call CscopeFind('g', expand('<cword>'))<CR> 
 " d: Find functions called by this function 
-nnoremap  <leader>bd :call cscope#find('d', expand('<cword>'))<CR> 
+nnoremap  <leader>bd :call CscopeFind('d', expand('<cword>'))<CR> 
 " c: Find functions calling this function 
-nnoremap  <leader>bc :call cscope#find('c', expand('<cword>'))<CR> 
+nnoremap  <leader>bc :call CscopeFind('c', expand('<cword>'))<CR> 
 " t: Find this text string 
-nnoremap  <leader>bt :call cscope#find('t', expand('<cword>'))<CR> 
+nnoremap  <leader>bt :call CscopeFind('t', expand('<cword>'))<CR> 
 " e: Find this egrep pattern 
-nnoremap  <leader>be :call cscope#find('e', expand('<cword>'))<CR> 
+nnoremap  <leader>be :call CscopeFind('e', expand('<cword>'))<CR> 
 " f: Find this file 
-nnoremap  <leader>bf :call cscope#find('f', expand('<cword>'))<CR> 
+nnoremap  <leader>bf :call CscopeFind('f', expand('<cword>'))<CR> 
 " i: Find files #including this file 
-nnoremap  <leader>bi :call cscope#find('i', expand('<cword>'))<CR> 
+nnoremap  <leader>bi :call CscopeFind('i', expand('<cword>'))<CR> 
