@@ -120,11 +120,44 @@ nnoremap <leader>l2 :set foldlevel=100<CR>
 let g:clang_format#command = "clang-format-4.0"
 let g:clang_format#code_style = "llvm"
 let g:clang_format#style_options = {
-            \ "IndentWidth" : 3,
-            \ "BreakBeforeBraces" : "Linux",
-            \ "AllowShortIfStatementsOnASingleLine" : "false",
-            \ "IndentCaseLabels" : "false"}
-
+\ "BreakBeforeBraces": "Custom",
+\ "BraceWrapping": {
+\    "AfterClass": "false",
+\    "AfterControlStatement": "true",
+\    "AfterEnum": "true",
+\    "AfterFunction": "true",
+\    "AfterNamespace": "true",
+\    "AfterStruct": "true",
+\    "AfterUnion": "true",
+\    "BeforeCatch": "true",
+\    "BeforeElse": "true",
+\ },
+\ "TabWidth" : "3",
+\ "UseTab" : "Never",
+\ "MaxEmptyLinesToKeep" : "1",
+\ "BinPackArguments" : "true",
+\ "BinPackParameters" : "false",
+\ "BreakStringLiterals" : "false",
+\ "AlwaysBreakTemplateDeclarations" : "true",
+\ "AllowShortIfStatementsOnASingleLine" : "false",
+\ "AllowShortCaseLabelsOnASingleLine" : "false",
+\ "AllowShortFunctionsOnASingleLine" : "None",
+\ "AllowShortBlocksOnASingleLine" : "false",
+\ "BreakBeforeBinaryOperators" : "All",
+\ "Standard" : "Cpp03",
+\ "ColumnLimit" : "130",
+\ "IndentCaseLabels" : "false",
+\ "IndentWidth" : "3",
+\ "PenaltyBreakString" : "1000",
+\ "AlignAfterOpenBracket" : "Align",
+\ "AlignConsecutiveAssignments" : "true",
+\ "AlignOperands" : "true",
+\ "AlignTrailingComments" : "true",
+\ "AlwaysBreakAfterDefinitionReturnType" : "TopLevel",
+\ "AlwaysBreakAfterReturnType" : "TopLevel",
+\ "AllowAllParametersOfDeclarationOnNextLine" : "false",
+\ }
+ 
 vmap <silent>= :ClangFormat<CR>
 nmap <silent><leader>= :<C-u>ClangFormat<CR>
 
